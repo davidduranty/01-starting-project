@@ -1,5 +1,6 @@
 import { Component, computed, EventEmitter, input, Input, output, Output } from '@angular/core';
 import { User } from './user.model';
+import { CardComponent } from "../shared/card/card.component";
 
 
 
@@ -9,7 +10,8 @@ import { User } from './user.model';
   selector: 'app-user',
   standalone: true,
   templateUrl: './user.component.html',
-  styleUrl: './user.component.css'
+  styleUrl: './user.component.css',
+  imports: [CardComponent]
 })
 export class UserComponent {
   @Input({ required: true }) user!: User;
